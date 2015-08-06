@@ -2,7 +2,7 @@ from django.shortcuts import render
 # coding: utf-8
 # Create your views here.
 quizzes = {
-	"my": {
+	"myborjeson": {
    		"name": u"My quiz",
 	   	"description": u"How well do you know me?"
 	},
