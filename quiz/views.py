@@ -6,6 +6,13 @@ quizzes = {
    		"name": u"My quiz",
 	   	"description": u"How well do you know me?"
 	},
+	"fotboll": {
+	   	"name": u"Största fotbollslagen",
+	   	"description": u"Kan du dina lag?"
+	},
+	"kanda-hackare": {
+	    	"name": u"Världens mest kända hackare",
+	    	"description": u"Hackerhistoria är viktigt, kan du den?"	},
 }
 
 def startpage(request):
@@ -20,8 +27,16 @@ def quiz(request, slug):
 	}
 	return render(request, "quiz/quiz.html", context)
 
-def question(request):
-	return render(request, "quiz/question.html")
+def question(request, slug, number):
+	context = {
+		"question_number": number
+		"question": "Hur många bultar har ölandsbron?",
+		"answer1": "12",
+		"answer2": "66 400",
+		"answer3": "7 428 495",
+		"quiz_slug": slug,
+	}
+	return render(request, "quiz/question.html", context)
 #def questiontwo(request):
 #	return render(request, "quiz/questiontwo.html")
 def completed(request):
