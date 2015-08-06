@@ -1,9 +1,18 @@
-body {
+  
+body {       
+    background-image:url('my.jpg');        
+    background-repeat: no-repeat;        
+    position: relative;        
+    width: 85%;            
+    height: 610px;       
+    margin-left: auto;      
+    margin-right: auto; 
     font-family: Georgia,"Times New Roman",Times,serif;
     max-width: 960px;
     background-color: #e9e9e9;
     margin: 0 auto;
     margin-top: 80px;
+    color: #333333;
 }
 
 h1 {
@@ -18,6 +27,8 @@ h2 {
     letter-spacing: 1px;
 }
 p {
+    : #333333;
+    font-family: Georgia,"Times New Roman",Times,serif;
     
 }
 ul {
@@ -35,7 +46,7 @@ a.navigation.nav:link, a:visited {
     display: block;
     width: 120px;
     font-weight: bold;
-    color: #ff748c;
+    color: #0000FF;
     background-color: #98bf21;
     text-align: center;
     padding: 4px;
