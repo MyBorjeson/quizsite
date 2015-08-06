@@ -2,12 +2,12 @@ from django.db import models
 
 # Create your models here.
 class Quiz(models.Model):
-	name = models.CharField(max_length=180)
-	slug = models.slug(max_length=180)
+	name = models.CharField(max_length=100)
+	slug = models.SlugField(max_length=100)
 	description = models.TextField()
 
 class Question(models.Model):
-	quiz = models.ForeignKey(Quiz, related_name=”questions”)
+	quiz = models.ForeignKey(Quiz,related_name="questions")
 	question = models.TextField()
 	answer1 = models.CharField(max_length=100)
 	answer2 = models.CharField(max_length=100)
