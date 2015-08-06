@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Take my quiz</h1>
-<p>Introduction to the quiz with a link to its <a href="question/1">starts</a></p>
+<p>Introduction to the quiz with a link to its <a href="{% url "question_page" quiz_slug 1 %}">starts</a></p>
 <h1>{{ quiz.name }}</h1>
 	<p>{{ quiz.description }}</p>
 

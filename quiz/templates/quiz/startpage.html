@@ -21,9 +21,12 @@
       </li>
 </lt></p>
 <h2>My quizes</h2>
-      <p>{% for quiz_slug, quiz in quizzes.items %}
-  <p>{{ quiz.name }}</p>
-{% endfor %}</p>
+     {% for quiz_slug, quiz in quizzes.items %}
+     <p><a href="{% url "quiz_page" quiz_slug %}">
+    {{ quiz.name }}
+  </a></p>
+{% endfor %}
+
       </div>
 
     </div>
