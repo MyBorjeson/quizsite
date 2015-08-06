@@ -7,7 +7,7 @@ def quiz(request):
 	return render(request, "quiz/quiz.html")
 def question(request):
 	return render(request, "quiz/question.html")
-def questiontwo(request):
-	return render(request, "quiz/questiontwo.html")
+#def questiontwo(request):
+#	return render(request, "quiz/questiontwo.html")
 def completed(request):
 	return render(request, "quiz/completed.html")
