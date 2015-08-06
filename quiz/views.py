@@ -1,13 +1,13 @@
 from django.shortcuts import render
-
+# coding: utf-8
 # Create your views here.
 def startpage(request):
-return render(request, "quiz/templates/startpage.html")
+	return render(request, "quiz/startpage.html")
 def quiz(request):
-return render(request, "quiz/templates/start-quiz.html")
-def questionone(request):
-return render(request, "quiz/templates/questionone.html")
+	return render(request, "quiz/quiz.html")
+def question(request):
+	return render(request, "quiz/question.html")
 def questiontwo(request):
-return render(request, "quiz/templates/questiontwo.html")
-def result(request):
-return render(request, "quiz/templates/resultpage.html")
+	return render(request, "quiz/questiontwo.html")
+def completed(request):
+	return render(request, "quiz/completed.html")
