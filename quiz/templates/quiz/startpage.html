@@ -20,12 +20,10 @@
         <li>Learning how to work with HTML and CSS</li></br>
       </li>
 </lt></p>
-      <div class="button">
-        <p><a href="">quiz 1</a></p>
-      </div>
-
-      <div class="button">
-        <a href="">quiz 2</a>
+<h2>My quizes</h2>
+      <p>{% for quiz_slug, quiz in quizzes.items %}
+  <p>{{ quiz.name }}</p>
+{% endfor %}</p>
       </div>
 
     </div>
