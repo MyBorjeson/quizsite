@@ -10,9 +10,9 @@
 </head>
 <body>
 <h1>Take my quiz</h1>
-<p>Introduction to the quiz with a link to its <a href="{% url "question_page" quiz.slug 1 %}">starts</a></p>
-<h1>{{ quiz.name }}</h1>
-	<p>{{ quiz.description }}</p>
+</br>
+<h2>{{ quiz.name }}</h2>
+	<p>{{ quiz.description }}</p></br><a href="{% url "question_page" quiz.slug 1 %}">Let's do this!</a></p>
 
 </body>
 </html>
