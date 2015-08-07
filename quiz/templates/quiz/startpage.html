@@ -19,10 +19,14 @@
       <h2>What I have learnt</h2>
       <p><lt>
         <li>Setting up a repository and connect it to <a href="https://github.com/"> GitHub</a> </li> </br>
-        <li>Learning how to work with HTML and CSS</li></br>
+        <li>Learning how to work with HTML and CSS</li>
+        <li>Writing simple programs using Python</li>
+        <li>Being able to set it up using Django</li>
+        <li>Deploying the site, to make it go live</li></br>
       </li>
 </lt></p>
 <h2>My quizes</h2>
+<p>Here is a list of the quizes I made, please feel free to try them out!</p>
      {% for quiz in quizzes %}
     <a href="{% url "quiz_page" quiz.slug %}">
     {{ quiz.name }}
