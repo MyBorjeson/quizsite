@@ -78,8 +78,7 @@ WSGI_APPLICATION = 'quizsite.wsgi.application'
 import dj_database_url
 DATABASES = {
     'default': dj_database_url.config(
-        default='sqlite:////{0}'.format(os.path.join(BASE_DIR,
-'db.sqlite3'))
+        default='sqlite:////{0}'.format(os.path.join(BASE_DIR,'db.sqlite3'))
     )
 }
 
@@ -104,4 +103,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=(
     os.path.join(BASE_DIR, "static"),
 )
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = 'static'
