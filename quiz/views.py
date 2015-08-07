@@ -1,29 +1,16 @@
+# endcoding: utf-8
 from django.shortcuts import render
-# coding: utf-8
-# Create your views here.
-quizzes = {
-	"myborjeson": {
-   		"name": u"My quiz",
-	   	"description": u"How well do you know me?"
-	},
-	"fotboll": {
-	   	"name": u"Största fotbollslagen",
-	   	"description": u"Kan du dina lag?"
-	},
-	"kanda-hackare": {
-	    	"name": u"Världens mest kända hackare",
-	    	"description": u"Hackerhistoria är viktigt, kan du den?"	},
-}
+from quiz.models import Quiz
 
 def startpage(request):
 	context = {
-		"quizzes": quizzes,
+	    "quizzes": Quiz.objects.all(),
 	}
 	return render(request, "quiz/startpage.html",context)
+
 def quiz(request, slug):
 	context = {
-		"quiz": quizzes[slug],
-		"quiz_slug": slug,
+	    	"quiz": Quiz.objects.get(slug=slug),
 	}
 	return render(request, "quiz/quiz.html", context)
 
