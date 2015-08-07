@@ -8,14 +8,23 @@
 <html>
 <body>
 <div class="form-style-5">
-<form>
+<form action="{% url "question_page" quiz.slug question_number %}" method="post">
+{% csrf_token %}
 <fieldset>
 <legend><span class="number">1</span>{{ question_number }}. {{ question }}</legend>
-<input type="radio" name="age" value="23">{{ answer1 }}
-<input type="radio" name="age" value="27">{{ answer2 }}
-<input type="radio" name="age" value="30">{{ answer3 }}
+<label answer="1">
+<input type="radio" name="answer" value="1">{{ answer1 }}
+</label>
+<label answer="2">
+<input type="radio" name="answer" value="2">{{ answer2 }}
+</label>
+<label answer="3">
+<input type="radio" name="answer" value="3">{{ answer3 }}
+</label>
 <input type="submit" value="Apply">
-<a href="{% url "question_page" quiz.slug question_number|add:1 %}">Next</a>
+
+<!-- <button type="submit">Nästa</button> -->
+<!-- <a href="{% url "question_page" quiz.slug question_number|add:1 %}">Next</a> -->
 </form>
 </div>
 <div class="mainbody">
