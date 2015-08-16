@@ -4,9 +4,19 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="description" content="This is a quiz, made my My Börjeson while in Palma de Mallorca exploring the programming world.">
 	<meta title="Quiz of My Börjeson">
-	<link rel="stylesheet" href="/static/normalize.css">
-<link rel="stylesheet" href="/static/my.css"> 
+	<link rel="shortcut icon" href="../static/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href="/../../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   </head>
+<body>
+<div class="container">
+<div class="row">
 <h1>Du är klar och fick {{ correct }} av {{ total }}</h1>
 <p>With these many correct answers you can actually be considered a stalker.</p>
 <p><a href="{% url "start_page" %}">Back to start page</a></p>
+</div>
+</div>
+</body>
+</html>
