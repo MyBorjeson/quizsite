@@ -9,4 +9,3 @@ urlpatterns = [
 	url(r"^quiz/([A-Za-z-]+)/completed/$", views.completed, name="completed_page"),
 	url(r'^admin/', include(admin.site.urls)),
 ]
-
