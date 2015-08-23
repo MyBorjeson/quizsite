@@ -20,8 +20,31 @@
     <![endif]-->
   </head>
   <body>
-  <div class="container">
-    <h1>Hello! This is My (Börjeson) first site</h1>     
+<body data-feedly-mini="yes">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KSWBB4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KSWBB4');</script>
+<!-- End Google Tag Manager -->
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a class="btn btn-primary" href="{% url "start_page" %}">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">My Quiz</h3>
+      </div>
+      <div class="header clearfix">
+<div class="jumbotron">
+    <h1>Hello! My (Börjeson) first quizsite</h1>     
        <p class="lead">I joined the group of women going to Palma in order to learn to code, <a href="http://tjejerkodar.se">www.tjejerkodar.se</a>. Please support this great organization. And feel free to have a look at my quiz - to see what I have achieved during one week of code in Palma.</p>
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -60,5 +83,8 @@
    
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <footer class="footer">
+        <p>© My Börjeson 2015</p>
+      </footer>
   </body>
 </html>

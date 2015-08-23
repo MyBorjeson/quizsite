@@ -10,9 +10,30 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<link href="/../../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   </head>
-<body>
-<div class="container">
-<div class="row">
+<body data-feedly-mini="yes">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KSWBB4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KSWBB4');</script>
+<!-- End Google Tag Manager -->
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="{% url "start_page" %}">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">My Quiz</h3>
+      </div>
+<div class="jumbotron">
+
 <h1>Du är klar och fick {{ correct }} av {{ total }}</h1>
 <div class="alert alert-success" role="alert">
         <strong>Well done!</strong> With these many correct answers you can actually be considered a stalker.

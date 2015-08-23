@@ -8,23 +8,45 @@
 	<link href="/../../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <html>
-<body>
-<div class="container">
+<body data-feedly-mini="yes">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KSWBB4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KSWBB4');</script>
+<!-- End Google Tag Manager -->
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="{% url "start_page" %}">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">My Quiz</h3>
+      </div>
+<div class="jumbotron">
 <div class="row">
-<form action="{% url "question_page" quiz.slug question_number %}" method="post">
+	<form class="form-group" action="{% url "question_page" quiz.slug question_number %}" method="post">
 {% csrf_token %}
-<fieldset>
-<legend><span class="number"></span>{{ question_number }}. {{ question }}</legend>
-<label answer="1">
-<input type="radio" name="answer" value="1">{{ answer1 }}
-</label>
-<label answer="2">
-<input type="radio" name="answer" value="2">{{ answer2 }}
-</label>
-<label answer="3">
-<input type="radio" name="answer" value="3">{{ answer3 }}
-</label>
-<input class="btn btn-success" type="submit" value="Apply">
+		<fieldset>
+		<legend>{{ question_number }}. {{ question }}</legend>
+		<label answer="1">
+		<input type="radio" name="answer" value="1">{{ answer1 }}
+		</label>
+		<label answer="2">
+		<input type="radio" name="answer" value="2">{{ answer2 }}
+		</label>
+		<label answer="3">
+		<input type="radio" name="answer" value="3">{{ answer3 }}
+		</label>
+		</br>
+		<input class="btn btn-success" type="submit" value="Apply">
 
 <!-- <button type="submit">Nästa</button> -->
 
@@ -32,4 +54,7 @@
 </div>
 </div>
 </body>
+<footer>
+	<p>Copyright 2015</p>
+</footer>
 </html>
