@@ -2,6 +2,7 @@
 from django.shortcuts import render
 from quiz.models import Quiz
 from django.shortcuts import redirect
+from django.http import Http404
 
 
 def startpage(request):
@@ -11,10 +12,15 @@ def startpage(request):
 	return render(request, "quiz/startpage.html",context)
 
 def quiz(request, slug):
-	context = {
-	    	"quiz": Quiz.objects.get(slug=slug),
-	}
-	return render(request, "quiz/quiz.html", context)
+    try:
+        quiz = Quiz.objects.get(slug=slug)
+    except Quiz.DoesNotExist:
+        raise Http404
+
+    context = {
+        "quiz": quiz,
+    }
+    return render(request, "quiz/quiz.html", context)
 
 def question(request, slug, number):
 	number = int(number)
