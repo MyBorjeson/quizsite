@@ -14,8 +14,10 @@
 <div class="container">
 <div class="row">
 <h1>Du är klar och fick {{ correct }} av {{ total }}</h1>
-<p>With these many correct answers you can actually be considered a stalker.</p>
-<p><a href="{% url "start_page" %}">Back to start page</a></p>
+<div class="alert alert-success" role="alert">
+        <strong>Well done!</strong> With these many correct answers you can actually be considered a stalker.
+      </div>
+<p><a class="btn btn-primary" href="{% url "start_page" %}">Back to start page</a></p>
 </div>
 </div>
 </body>

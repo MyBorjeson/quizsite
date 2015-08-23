@@ -21,25 +21,40 @@
   </head>
   <body>
   <div class="container">
-    <h1>Hello! This is My (Börjeson) first site</h1>      
-       <p class="lead">I joined the group of women going to Palma in order to learn to code. Please support this great organization <a href="http://tjejerkodar.se">www.tjejerkodar.se</a></p>
-      <h2>What I have learnt</h2>
-      <p><lt>
-        <li>Setting up a repository and connect it to <a href="https://github.com/"> GitHub</a> </li>
-        <li>Learning how to work with HTML and CSS</li>
-        <li>Writing simple programs using Python</li>
-        <li>Being able to set it up using Django</li>
-        <li>Deploying the site, to make it go live</li>
-      </li>
-</lt></p>
-</br>
+    <h1>Hello! This is My (Börjeson) first site</h1>     
+       <p class="lead">I joined the group of women going to Palma in order to learn to code, <a href="http://tjejerkodar.se">www.tjejerkodar.se</a>. Please support this great organization. And feel free to have a look at my quiz - to see what I have achieved during one week of code in Palma.</p>
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="item active left">
+            <img data-src="holder.js/1140x500/auto/#777:#555/text:First slide" alt="First slide [1140x500]" src="../static/coffee.jpg" data-holder-rendered="true">
+          </div>
+          <div class="item next left">
+            <img data-src="holder.js/1140x500/auto/#666:#444/text:Second slide" alt="Second slide [1140x500]" src="../static/scary.jpg">
+          </div>
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div> 
+      <div>
 <h3>My quizes</h3>
 <p>Here is a list of the quizes I made, please feel free to try them out!</p>
      {% for quiz in quizzes %}
-    <a href="{% url "quiz_page" quiz.slug %}">
+    <a type="button" class="btn btn-success" href="{% url "quiz_page" quiz.slug %}">
     {{ quiz.name }}
 {% endfor %}
 </a>
+</div>
+</div>
 </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    
